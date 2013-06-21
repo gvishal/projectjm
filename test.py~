@@ -1,0 +1,8 @@
+import html2text
+h = html2text.HTML2Text()
+h.ignore_links = True
+h.ignore_images = True
+f = open('testdatahtml.txt').read()
+w = open('testdatahtml2txt','w')
+w.write(h.handle(f))
+
